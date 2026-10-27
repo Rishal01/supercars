@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApexSupercars | Luxury & Supercar Rentals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="logo">APEX<span>SUPER</span></div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#fleet">Our Fleet</a></li>
+                <li><a href="#booking">Book Now</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Drive Your Dream Supercar</h1>
+            <p>Experience unmatched speed, luxury, and prestige. Rent Ferrari, Lamborghini, and Porsche today.</p>
+            <a href="#fleet" class="btn">Explore Fleet</a>
+        </div>
+    </section>
+
+    <!-- Supercar Fleet Section -->
+    <section id="fleet" class="fleet">
+        <h2>Featured Supercars</h2>
+        <div class="car-grid">
+            <div class="car-card">
+                <img src="https://unsplash.com" alt="Lamborghini">
+                <h3>Lamborghini Huracán</h3>
+                <p>V10 Engine | 610 HP | 0-60 in 3.2s</p>
+                <span class="price">$1,200 / day</span>
+                <button onclick="selectCar('Lamborghini Huracán', 1200)">Rent Now</button>
+            </div>
+            <div class="car-card">
+                <img src="https://unsplash.com" alt="Ferrari">
+                <h3>Ferrari 488 Spider</h3>
+                <p>V8 Twin-Turbo | 661 HP | Convertible</p>
+                <span class="price">$1,500 / day</span>
+                <button onclick="selectCar('Ferrari 488 Spider', 1500)">Rent Now</button>
+            </div>
+            <div class="car-card">
+                <img src="https://unsplash.com" alt="Porsche">
+                <h3>Porsche 911 GT3</h3>
+                <p>Flat-6 | 502 HP | Track Ready</p>
+                <span class="price">$950 / day</span>
+                <button onclick="selectCar('Porsche 911 GT3', 950)">Rent Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking / Calculator Section -->
+    <section id="booking" class="booking-section">
+        <h2>Quick Rental Calculator</h2>
+        <div class="booking-form">
+            <label>Selected Car:</label>
+            <input type="text" id="carName" value="Lamborghini Huracán" readonly>
+
+            <label>Number of Days:</label>
+            <input type="number" id="rentalDays" min="1" value="1" oninput="calculateTotal()">
+
+            <h3 id="totalCost">Total: $1,200</h3>
+            <button class="btn" onclick="confirmBooking()">Confirm Reservation</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
