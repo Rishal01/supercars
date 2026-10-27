@@ -22,7 +22,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section id="home" class="hero" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://unsplash.com') center/cover no-repeat;">
         <div class="hero-content">
             <h1>Drive Your Dream Supercar</h1>
             <p>Experience unmatched speed, luxury, and prestige. Rent Ferrari, Lamborghini, and Porsche today.</p>
@@ -35,25 +35,25 @@
         <h2>Featured Supercars</h2>
         <div class="car-grid">
             <div class="car-card">
-                <img src="https://unsplash.com" alt="Lamborghini">
+                <img src="https://unsplash.com" alt="Lamborghini Huracán">
                 <h3>Lamborghini Huracán</h3>
                 <p>V10 Engine | 610 HP | 0-60 in 3.2s</p>
                 <span class="price">$1,200 / day</span>
                 <button onclick="selectCar('Lamborghini Huracán', 1200)">Rent Now</button>
             </div>
             <div class="car-card">
-                <img src="https://unsplash.com" alt="Ferrari">
+                <img src="https://unsplash.com" alt="Ferrari 488 Spider">
                 <h3>Ferrari 488 Spider</h3>
                 <p>V8 Twin-Turbo | 661 HP | Convertible</p>
                 <span class="price">$1,500 / day</span>
                 <button onclick="selectCar('Ferrari 488 Spider', 1500)">Rent Now</button>
             </div>
             <div class="car-card">
-                <img src="https://unsplash.com" alt="Porsche">
-                <h3>Porsche 911 GT3</h3>
+                <img src="https://unsplash.com" alt="Porsche GT3">
+                <h3>Porsche GT3</h3>
                 <p>Flat-6 | 502 HP | Track Ready</p>
                 <span class="price">$950 / day</span>
-                <button onclick="selectCar('Porsche 911 GT3', 950)">Rent Now</button>
+                <button onclick="selectCar('Porsche GT3', 950)">Rent Now</button>
             </div>
         </div>
     </section>
@@ -62,10 +62,10 @@
     <section id="booking" class="booking-section">
         <h2>Quick Rental Calculator</h2>
         <div class="booking-form">
-            <label>Selected Car:</label>
+            <label for="carName">Selected Car:</label>
             <input type="text" id="carName" value="Lamborghini Huracán" readonly>
 
-            <label>Number of Days:</label>
+            <label for="rentalDays">Number of Days:</label>
             <input type="number" id="rentalDays" min="1" value="1" oninput="calculateTotal()">
 
             <h3 id="totalCost">Total: $1,200</h3>
@@ -76,3 +76,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
